@@ -1,11 +1,10 @@
 package com.ht.service.admin;
 
-import java.util.List;
-
-import com.ht.dto.admin.UserDTO;
+import com.ht.entity.admin.AdminUsersEntity;
 
 public interface AdminService {
 	
-	public List<UserDTO> fetchUsers();
-
+	public Iterable<AdminUsersEntity> fetchUsers();
+	
+	//public AdminClientsEntity saveUser();
 }
