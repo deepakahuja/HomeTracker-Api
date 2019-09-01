@@ -27,6 +27,17 @@ public class AdminUsersEntity {
 	@Column
 	String phone;
 	
+	@Column
+	String createdOn;
+	
+	public String getCreatedOn() {
+		return createdOn;
+	}
+
+	public void setCreatedOn(String createdOn) {
+		this.createdOn = createdOn;
+	}
+
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="fk_admin_clients", nullable=false)
 	private AdminClientsEntity fkAdminClients ;

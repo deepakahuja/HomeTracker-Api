@@ -1,10 +1,12 @@
 package com.ht.service.admin;
 
-import com.ht.entity.admin.AdminUsersEntity;
+import java.util.List;
+
+import com.ht.dto.admin.UserSearchDTO;
 
 public interface AdminService {
 	
-	public Iterable<AdminUsersEntity> fetchUsers();
+	public List<UserSearchDTO> fetchUsers() throws Exception;
 	
 	//public AdminClientsEntity saveUser();
 }

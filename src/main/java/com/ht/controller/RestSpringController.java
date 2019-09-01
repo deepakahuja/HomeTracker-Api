@@ -1,4 +1,4 @@
-package com.ht.controller.sample;
+package com.ht.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

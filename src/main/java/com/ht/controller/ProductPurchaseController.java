@@ -1,4 +1,4 @@
-package com.ht.controller.purchase;
+package com.ht.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

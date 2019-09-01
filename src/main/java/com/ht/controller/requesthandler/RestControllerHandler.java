@@ -1,4 +1,4 @@
-package com.ht.controller;
+package com.ht.controller.requesthandler;
 
 import javax.servlet.http.HttpServletRequest;
 
