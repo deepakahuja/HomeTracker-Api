@@ -1,10 +1,10 @@
-package com.ht.dto.sample;
+package com.ht.entity.product;
 import javax.persistence.*;
 
 //@Component
 @Entity
 @Table(name = "products")
-public class Product {
+public class ProductEntity {
 	@Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
 	int productId;

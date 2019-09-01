@@ -21,7 +21,7 @@ public abstract class RestControllerHandler {
 	
 	protected BindingResult bindingResult;
 	
-	protected abstract void prepareHandler(Object requestDTO, BindingResult bindingResult, String... pathParams) throws Exception;
+	protected abstract void prepareHandler(Object requestPojo, BindingResult bindingResult, String... pathParams) throws Exception;
 	
 	protected abstract void updateInputSearchCriteria() throws Exception;
 	
@@ -29,8 +29,8 @@ public abstract class RestControllerHandler {
 	
 	protected abstract Object processRequest() throws Exception;
 	
-	public final Object handleRequest(Object requestDTO, BindingResult bindingResult, String... pathParams) throws Exception{
-		prepareHandler(requestDTO, bindingResult, pathParams);
+	public final Object handleRequest(Object requestPojo, BindingResult bindingResult, String... pathParams) throws Exception{
+		prepareHandler(requestPojo, bindingResult, pathParams);
 		updateInputSearchCriteria();
 		validateRequest();
 		return processRequest();

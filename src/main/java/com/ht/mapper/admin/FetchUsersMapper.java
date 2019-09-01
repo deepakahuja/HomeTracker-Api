@@ -6,9 +6,9 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import com.ht.dto.admin.UserSearchDTO;
 import com.ht.entity.admin.AdminUsersEntity;
 import com.ht.mapper.Mapper;
+import com.ht.pojo.response.admin.UserSearchDTO;
 
 @Component
 public class FetchUsersMapper extends Mapper{
@@ -34,5 +34,4 @@ public class FetchUsersMapper extends Mapper{
 		}
 		return response;
 	}
-
 }

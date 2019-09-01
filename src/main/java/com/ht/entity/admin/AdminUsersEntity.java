@@ -30,6 +30,21 @@ public class AdminUsersEntity {
 	@Column
 	String createdOn;
 	
+	@Column
+	int active;
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
+
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="fk_admin_clients", nullable=false)
+	private AdminClientsEntity fkAdminClients ;
+	
 	public String getCreatedOn() {
 		return createdOn;
 	}
@@ -37,10 +52,6 @@ public class AdminUsersEntity {
 	public void setCreatedOn(String createdOn) {
 		this.createdOn = createdOn;
 	}
-
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="fk_admin_clients", nullable=false)
-	private AdminClientsEntity fkAdminClients ;
 
 	public AdminClientsEntity getFkAdminClients() {
 		return fkAdminClients;

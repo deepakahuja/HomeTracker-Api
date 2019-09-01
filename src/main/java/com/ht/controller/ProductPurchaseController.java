@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ht.dao.ProductPurchaseRecordDao;
-import com.ht.dto.productpurchaserecord.ProductPurchaseRecordDto;
+import com.ht.pojo.response.productpurchaserecord.ProductPurchaseRecordDto;
 import com.ht.service.ProductPurchaseService.ProductPurchaseService;
 
 @RestController

@@ -1,4 +1,4 @@
-package com.ht.dto.admin;
+package com.ht.pojo.response.admin;
 
 public class UserSearchDTO {
 	

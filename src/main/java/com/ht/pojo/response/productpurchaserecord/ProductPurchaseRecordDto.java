@@ -1,4 +1,4 @@
-package com.ht.dto.productpurchaserecord;
+package com.ht.pojo.response.productpurchaserecord;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

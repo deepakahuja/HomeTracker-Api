@@ -1,7 +1,5 @@
 package com.ht.controller.requesthandler;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,21 +7,23 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.context.annotation.RequestScope;
 
-import com.ht.pojo.response.admin.UserSearchDTO;
+import com.ht.pojo.request.admin.User;
 import com.ht.service.admin.AdminService;
 
 @Component
 @RequestScope
-public class FetchUsersHandler extends RestControllerHandler{
+public class SaveUsersHandler extends RestControllerHandler{
 	
 	@Autowired
 	AdminService service;
 	
+	User requestPojo;
+	
 	@Override
 	protected void prepareHandler(Object requestPojo, BindingResult bindingResult, String... pathParams)
 			throws Exception {
-		// TODO Auto-generated method stub
 		
+		this.requestPojo = (User)requestPojo;
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class FetchUsersHandler extends RestControllerHandler{
 	@Override
 	protected Object processRequest() throws Exception {
 		
-		List<UserSearchDTO> userSearchDTOs = service.fetchUsers();
-		return new ResponseEntity<List<UserSearchDTO>>(userSearchDTOs, HttpStatus.OK);		
+		int id = service.saveUser(this.requestPojo);
+		return new ResponseEntity<Integer>(id, HttpStatus.CREATED);
 	}
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ht.entity.admin.AdminUsersEntity;
 
 @Repository
-public interface AdminRepo extends CrudRepository<AdminUsersEntity, Integer>{
+public interface AdminUserRepo extends CrudRepository<AdminUsersEntity, Integer>{
 
 }

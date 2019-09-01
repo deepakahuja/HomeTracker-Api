@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ht.dto.sample.Product;
+import com.ht.entity.product.ProductEntity;
 import com.ht.service.sample.ProductService;
 
 @RestController
 @CrossOrigin(origins = "*")
 public class RestSpringController {
 	//@Autowired
-	Product p;
+	ProductEntity p;
 	
 	@Autowired
 	ProductService service;
@@ -26,9 +26,9 @@ public class RestSpringController {
 	}
 	
 	@RequestMapping(value = "/getProducts/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Product[] getProducts(@PathVariable("id") int i){
+	public ProductEntity[] getProducts(@PathVariable("id") int i){
 		System.out.println("Hello Sample Products **********************");
-	  Product[] products = new Product[1];	  
+	  ProductEntity[] products = new ProductEntity[1];	  
 	  p = service.getProductById(i);
 	  products[0] = p;
 	  return products;
