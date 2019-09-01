@@ -16,7 +16,7 @@ import com.ht.dao.ProductPurchaseRecordDao;
 import com.ht.pojo.response.productpurchaserecord.ProductPurchaseRecordDto;
 import com.ht.service.ProductPurchaseService.ProductPurchaseService;
 
-@RestController
+//@RestController
 @CrossOrigin(origins = "*")
 public class ProductPurchaseController {
 	

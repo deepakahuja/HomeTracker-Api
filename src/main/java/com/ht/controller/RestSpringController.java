@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ht.entity.product.ProductEntity;
 import com.ht.service.sample.ProductService;
 
-@RestController
+//@RestController
 @CrossOrigin(origins = "*")
 public class RestSpringController {
 	//@Autowired
@@ -29,7 +29,7 @@ public class RestSpringController {
 	public ProductEntity[] getProducts(@PathVariable("id") int i){
 		System.out.println("Hello Sample Products **********************");
 	  ProductEntity[] products = new ProductEntity[1];	  
-	  p = service.getProductById(i);
+	  //p = service.getProductById(i);
 	  products[0] = p;
 	  return products;
 	}

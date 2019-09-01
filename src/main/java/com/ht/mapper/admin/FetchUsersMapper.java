@@ -14,13 +14,13 @@ import com.ht.pojo.response.admin.UserSearchDTO;
 public class FetchUsersMapper extends Mapper{
 
 	@Override
-	protected Object maptToEntity(Object objToMap, Map<String, String> extraFields) throws Exception {
+	protected Object maptToEntity(Object objToMap, Map<String, Object> extraFields) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	protected Object maptToResponse(Object objToMap, Map<String, String> extraFields) throws Exception {
+	protected Object maptToResponse(Object objToMap, Map<String, Object> extraFields) throws Exception {
 		Iterable<AdminUsersEntity> resultSets = (Iterable<AdminUsersEntity>)objToMap;
 		List<UserSearchDTO> response = new ArrayList();
 		for(AdminUsersEntity resultSet : resultSets) {

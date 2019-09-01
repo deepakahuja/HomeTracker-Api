@@ -11,11 +11,11 @@ import com.ht.enums.MappingTypeEnum;
  */
 public abstract class Mapper {
 	
-	protected abstract Object maptToEntity(Object objToMap, Map<String, String> extraFields) throws Exception;
+	protected abstract Object maptToEntity(Object objToMap, Map<String, Object> extraFields) throws Exception;
 	
-	protected abstract Object maptToResponse(Object objToMap, Map<String, String> extraFields) throws Exception;
+	protected abstract Object maptToResponse(Object objToMap, Map<String, Object> extraFields) throws Exception;
 	
-	public final Object map(Object objToMap, MappingTypeEnum mappingType, Map<String, String> extraFields) throws Exception{
+	public final Object map(Object objToMap, MappingTypeEnum mappingType, Map<String, Object> extraFields) throws Exception{
 		if(MappingTypeEnum.MAPTOENTITY.equals(mappingType)) {
 			return maptToEntity(objToMap, extraFields);
 		} else if(MappingTypeEnum.MAPTORESPONSE.equals(mappingType)) {
